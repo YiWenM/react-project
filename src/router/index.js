@@ -17,6 +17,8 @@ const router = (<Provider store={store}>
         <Switch>
            <Route path='/home' component={Home}/> 
            <Route path='/cart' component={Cart}/> 
+           <Route path='/search/:id' component={Search}/> 
+           <Route path='/view/:id' component={Search}/> 
            <Route path='/category/:id' component={Category}/> 
            <Route path='/goods/detail/:id' component={Detail}/> 
            <Redirect from ='/' to='/home'/>
