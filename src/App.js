@@ -7,11 +7,13 @@ import Footer from './components/footer'
 class App extends Component {
   render() {
     return (
-      <div>
-      <Common></Common>
-      {this.props.children}
-      <Footer/>
-      </div>
+    	<div className="container">
+	      <div className="container_fluid">
+		      <Common></Common>
+		      {this.props.children}
+		      <Footer/>
+	      </div>
+	    </div>
     );
   }
 }

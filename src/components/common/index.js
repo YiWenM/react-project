@@ -1,12 +1,43 @@
 import React, { Component } from 'react';
 import {connect}from 'react-redux'
+import css from "./index.module.scss"
+
 //import action from 'action'
 class Common extends Component {
   render() {
     return (
-      <div>
-      common
-      </div>
+      <header>
+	      <div className={css.head_top}>
+	      		<i className="iconfont icon-atm"></i>
+	      		<span>首页</span>
+	      		<ul className={css.top_right}>
+					<li>Hi！花卷商城欢迎你~</li>
+					<li>登录</li>
+					<li>
+						<i className="iconfont icon-mobilephone"></i>
+						<span>花卷app下载</span>
+					</li>
+	      		</ul>
+	      </div>
+	      <div className={css.head_down}>
+		      <div className={css.down_logo}>
+					<img src="/head/logo.png" alt=""/>
+					<h1>花卷</h1>
+					<p>红人视频购物商城</p>
+		      </div>
+		      <div class={css.down_right}>
+		      		<div className={css.down_input}>
+						<input type="text" placeholder="请输入想找的红人或商品"/>
+						<i className="iconfont icon-search"></i>
+					</div>
+					<p>
+						<i className="iconfont icon-cart"></i>
+						<span>我的购物车</span>
+						<span>0</span>
+					</p>
+		      </div>
+	      </div>
+      </header>
     );
   }
 }
