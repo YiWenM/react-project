@@ -1,7 +1,7 @@
 const proxy = require('http-proxy-middleware');
 module.exports=function(app){
 	app.use(proxy('/pc',{
-		target:'https://huajuanmall.com',
+		target:'https://www.huajuanmall.com',
 		host:'huajuanmall.com',
 		changeOrigin:true
 	}));
