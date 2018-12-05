@@ -1,99 +1,102 @@
-header{
-	.head_top{
-		clear:both;
-		line-height:39px;
-		background: #eee;
-		i{
-			margin-right:5px;
-		}
-		.top_right{
-			float:right;
-			li:nth-of-type(1){
-				color:#e36783;
-			}
-			li{
-				float:left;
-				padding-left:25px;
-				padding-right:25px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+	header{
+		.head_topper{
+			height:39px;
+			background: #eee;
+			.head_top{
+				overflow:hidden;
+				line-height:39px;
 				i{
-					margin-right:6px;
-					margin-top:5px;
-					color:#e36783;
+					margin-right:5px;
+				}
+				.top_right{
+					float:right;
+					li:nth-of-type(1){
+						color:#e36783;
+					}
+					li{
+						float:left;
+						padding-left:25px;
+						padding-right:25px;
+						i{
+							margin-right:6px;
+							margin-top:5px;
+							color:#e36783;
+						}
+					}
 				}
 			}
 		}
-	}
-	.head_down{
-		clear:both;
-		overflow:hidden;
-		.down_logo{
-			float:left;
-			margin-top:32px;
-			margin-left:38px;
-			clear:both;
-			img{
+		.head_down{
+			overflow:hidden;
+			.down_logo{
 				float:left;
-			}
-			h1{
-				font-size:28px;
-				margin-left:58px;
-				color:#ea5f7e;
-			}
-			p{
-				color:#9b9b9b;
-				font-size:14px;
-				line-height:40px;
-				margin-left:-4px;
-				margin-bottom:13px;
-			}
-		}
-		.down_right{
-			margin-top:50px;
-			float:right;
-
-			.down_input{
-				float:left;
-				input{
-					width:485px;
-					height:50px;
-					outline:none;
-					border:0;
-					border-radius:30px;
-					background: #eee;
-					padding:20px;
-				}
-				i{
-					margin-left:-30px;
-					margin-top:5px;
-				}
-			}
-			p{
-				float:left;
-				height:48px;
-				line-height:48px;
-				width:195px;
-				text-align:center;
-				border:1px solid #eee;
+				margin-top:32px;
 				margin-left:38px;
-				position:relative;
-				span:nth-of-type(2){
-					width:23px;
-					height:23px;
-					background: #ff0047;
-					color:white;
-					border-radius:50%;
-					text-align:center;
-					line-height:24px;
-					position:absolute;
-					top:5px;
-					right:40px;
+				clear:both;
+				img{
+					float:left;
 				}
-				i{
-					margin-right:11px;
-					margin-top:5px;
-					color:#e36783;
+				h1{
+					font-size:28px;
+					margin-left:58px;
+					color:#ea5f7e;
+				}
+				p{
+					color:#9b9b9b;
+					font-size:14px;
+					line-height:40px;
+					margin-left:-4px;
+					margin-bottom:13px;
+				}
+			}
+			.down_right{
+				margin-top:50px;
+				float:right;
+
+				.down_input{
+					float:left;
+					input{
+						width:485px;
+						height:50px;
+						outline:none;
+						border:0;
+						border-radius:30px;
+						background: #eee;
+						padding:20px;
+					}
+					i{
+						margin-left:-30px;
+						margin-top:5px;
+					}
+				}
+				p{
+					float:left;
+					height:48px;
+					line-height:48px;
+					width:195px;
+					text-align:center;
+					border:1px solid #eee;
+					margin-left:38px;
+					position:relative;
+					span:nth-of-type(2){
+						width:23px;
+						height:23px;
+						background: #ff0047;
+						color:white;
+						border-radius:50%;
+						text-align:center;
+						line-height:24px;
+						position:absolute;
+						top:5px;
+						right:40px;
+					}
+					i{
+						margin-right:11px;
+						margin-top:5px;
+						color:#e36783;
+					}
 				}
 			}
 		}
 	}
-}

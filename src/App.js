@@ -8,11 +8,11 @@ class App extends Component {
   render() {
     return (
     	<div className="container">
-	      <div className="container_fluid">
-		      <Common></Common>
-		      {this.props.children}
-		      <Footer/>
-	      </div>
+	      		
+		      	<Common></Common>
+		      		{this.props.children}
+		      	<Footer/>
+			
 	    </div>
     );
   }
