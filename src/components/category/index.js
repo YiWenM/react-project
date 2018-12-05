@@ -12,7 +12,7 @@ class Category extends Component {
 	}
   render() {
     return (
-      <div>
+      <div className="container_fluid">
     	    {
     	    	this.props.lists.list?
     	    	<div className = {css.head}>
@@ -60,7 +60,7 @@ class Category extends Component {
   }
  wheelScroll(){
     	var imgHeight = document.querySelector('.lanjjiazai').offsetHeight;
-    	if ((document.documentElement.scrollTop||document.body.scrollTop)>imgHeight-200){
+    	if ((document.documentElement.scrollTop||document.body.scrollTop)>imgHeight-500){
     		let data = this.props.my.location.search.slice(4)
         console.log(data)
     		this.setState({
@@ -70,7 +70,10 @@ class Category extends Component {
            
     	} 
   }
- 
+  componentWillUnmount(){
+    console.log(1111)
+    window.onscroll=null;
+  }
   handleClick(data,index){
   	this.setState({
   	   current:data,
