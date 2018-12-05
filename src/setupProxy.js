@@ -22,4 +22,7 @@ module.exports=function(app){
                   changeOrigin:true
           }));
         };*/
+<<<<<<< HEAD
 
+=======
+>>>>>>> 18b791831550077540d7613d1095eaff86674113
