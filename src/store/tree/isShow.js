@@ -1,7 +1,7 @@
-const reduer = (pervState={},action={})=>{
+	const reduer = (pervState=false,action={})=>{
 	let {type,payload} = action;
 	switch(type){
-		case 'pcIndex':
+		case 'isShow':
 		return payload;
 		default:
 		return pervState;

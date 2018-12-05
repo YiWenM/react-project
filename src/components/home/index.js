@@ -7,6 +7,7 @@ import {NavLink}from 'react-router-dom'
 import  axios from 'axios' 
 import { Breadcrumb } from 'antd'
 import Category from '../category'
+import StartHome from '../homelist'
 class Home extends Component {
 	constructor(props){
 		super(props);
@@ -39,27 +40,29 @@ class Home extends Component {
 	         	<span>化妆教学（收费）</span>
 	          </li>
 	         </ul>
-           <Category my={this.props.history} ></Category>  
+           {
+            this.props.isShow?
+            <Category my={this.props.history} ></Category> 
+            :
+            <StartHome my={this.props.history}></StartHome> 
+           }
          </div>  
       </div>
     );
   }
   componentWillMount(){
-    console.log(this.props)
   	this.props.getNav();
   }
   handleClick(e,data,index){
-    if(e){
-      e.stopPropagation();
-      e.nativeEvent.stopImmediatePropagation()
-    }
   	this.setState({
     	current:index,
       currents:index,
       isShow:true
     })
+    this.props.getList4(data)
     this.props.getList3(index,data)
     this.props.getList(index,data)
+    this.props.getShow();
   	this.props.history.push('/category?id=' + data)
     
   }
@@ -71,6 +74,8 @@ class Home extends Component {
         current:ulIndex
 
       })
+      this.props.getShow();
+      this.props.getList4(data);
       this.props.getList2(data)
       this.props.getList(ulIndex,data)
      this.props.getList3(data,mainid)
@@ -103,6 +108,7 @@ class Home extends Component {
 export default connect((state)=>{
 	return{
 		dataList:state.goodsClass,
-    list:state.Bar
+    list:state.Bar,
+    isShow:state.isShow
 	}
 },action)(Home) ;

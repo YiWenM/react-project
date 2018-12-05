@@ -4,7 +4,9 @@ import { createStore, applyMiddleware, compose,combineReducers } from 'redux';
 import  goodsClass from './tree/goodsClass.js'
 import  Bar from './tree/bar.js'
 import  indexBar from './tree/indexbar.js'
-import  Id from './tree/bar3.js'
+import  Id from './tree/bar3.js';
+import CategroyList from './tree/categoryList.js'
+import isShow from './tree/isShow.js'
 
 
 
@@ -12,7 +14,9 @@ const reducer=combineReducers({
     goodsClass,
     Bar,
     indexBar,
-    Id
+    Id,
+    CategroyList,
+    isShow
 
 })
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

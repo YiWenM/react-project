@@ -11,8 +11,7 @@
    },
    getList(data,id){
     return axios.get('/pc/pcIndex/class').then(res=>{
-      console.log(res.data.goodsClass[data])
-        return {
+      return{
           type:'bar',
           payload:{list:res.data.goodsClass[data],id:id,index:data}
         }
@@ -29,6 +28,20 @@
           type:'bar3',
           payload:{index:data,mainid:mainid}
         }
-   }  	
+   } ,
+   getList4(data){
+    return axios.get(`/pc/goods/gcGoods?gc_id=${data}&limit=15&offset=0`).then(res=>{
+      return{
+        type:'categoryList',
+        payload:res.data.goods_info
+      }
+    })
+   } ,
+   getShow(){
+    return{
+      type:'isShow',
+      payload:true
+    }
+   }	
  }
  export default action
