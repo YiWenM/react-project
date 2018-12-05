@@ -19,8 +19,10 @@ const router = (<Provider store={store}>
            <Route path='/home' component={Home}/> 
            <Route path='/cart' component={Cart}/> 
            <Route path='/search/:id' component={Search}/> 
-           <Route path='/video/:id' component={Video}/> 
-           <Route path='/category/:id' component={Category}/> 
+           <Route path='/chargeTutoria' component={Charge}/> 
+           <Route path='/video/:id' component={Video}/>
+           <Route path='/category' render={(props)=><Home history={props.history}>
+           </Home>}/>  
            <Route path='/goods/detail/:id' component={Detail}/> 
            <Route path='/hongren' render={()=><Hongren>
               <Route path= '/hongren/list' component = {List}/>

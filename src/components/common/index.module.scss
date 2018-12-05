@@ -1,24 +1,31 @@
 header{
-	.head_top{
-		clear:both;
-		line-height:39px;
-		background: #eee;
-		i{
-			margin-right:5px;
-		}
-		.top_right{
-			float:right;
-			li:nth-of-type(1){
-				color:#e36783;
+	.head{
+		background:#eee;
+		.head_top{
+			clear:both;
+			line-height:39px;
+			background: #eee;
+			span{
+				cursor: pointer;
+				color:#000;
 			}
-			li{
-				float:left;
-				padding-left:25px;
-				padding-right:25px;
-				i{
-					margin-right:6px;
-					margin-top:5px;
+			i{
+				margin-right:5px;
+			}
+			.top_right{
+				float:right;
+				li:nth-of-type(1){
 					color:#e36783;
+				}
+				li{
+					float:left;
+					padding-left:25px;
+					padding-right:25px;
+					i{
+						margin-right:6px;
+						margin-top:5px;
+						color:#e36783;
+					}
 				}
 			}
 		}

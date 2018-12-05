@@ -1,8 +1,9 @@
 .container{
-	width: 100%;
+	width:100%;
 }
 .container_fluid{
 	width: 1500px;
+	margin:0 auto;
 }
 img{
 	display: block;
@@ -22,4 +23,9 @@ body,html{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+.clear::after{
+	content: '';
+	clear: both;
+	display: block;
 }

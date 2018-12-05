@@ -1,0 +1,15 @@
+.head{
+	width: 100%;
+	padding: 0 20px;
+	border: 1px solid #eee;
+	cursor: pointer;
+	.kinds{
+		width: 100%;
+	    line-height: 50px;
+	    font-size: 12px;
+	    cursor: pointer;
+	}
+}
+.active{
+	color:#ff4d82;
+}
