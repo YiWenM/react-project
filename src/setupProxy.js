@@ -5,7 +5,12 @@ module.exports=function(app){
 		target:'https://www.huajuanmall.com',
 		host:'huajuanmall.com',
 		changeOrigin:true
-	}));
+	}))
+  app.use(proxy('/search',{
+    target:'https://www.huajuanmall.com',
+    host:'huajuanmall.com',
+    changeOrigin:true
+  }))
 	
 }
 //https://www.huajuanmall.com/pc/rec/single?cls_id=0&offset=0
@@ -17,3 +22,7 @@ module.exports=function(app){
                   changeOrigin:true
           }));
         };*/
+<<<<<<< HEAD
+
+=======
+>>>>>>> 18b791831550077540d7613d1095eaff86674113

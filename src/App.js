@@ -9,16 +9,17 @@ class App extends Component {
     return (
     	<div className="container">
 	      
-		      <Common></Common>
-		      <div>
-		          <BackTop />
-		          <strong style={{ color: 'rgba(64, 64, 64, 0.6)' }}></strong>
-		        </div>,
-		      {this.props.children}
-		      <Footer/>
+		    <Common></Common>
+			    <div>
+			        <BackTop />
+			        <strong style={{ color: 'rgba(64, 64, 64, 0.6)' }}></strong>
+			    </div>,
+			    {this.props.children}
+		    <Footer/>
 	     
+
 	    </div>
-    );
+    )
   }
 }
 
