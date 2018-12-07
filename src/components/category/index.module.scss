@@ -18,9 +18,9 @@
 	display: flex;
 	align-items:center;
 	width: 100%;
-	li{
-		width: 224px;
-		margin-right: 20px;
+	.goodsList{
+		width: 220px;
+		margin-right:20px;
 		margin-top: 20px;
 	    padding: 10px;
   	    cursor: pointer;
@@ -69,7 +69,8 @@
       }
 	}
 }
-li:hover{
+/*我只给对应的li加了类名*/
+.goodsList:hover{
   img{
     transform: scale(1.1);
     transition: 1s

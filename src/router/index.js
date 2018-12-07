@@ -20,7 +20,7 @@ const router = (<Provider store={store}>
       <App>
         <Switch>
            <Route path='/home' component={Home}/> 
-           <Route path='/cart' component={Cart}/> 
+           <Route path='/shoppingCart' component={Cart}/> 
            <Route path='/login' component={Login}/> 
            <Route path='/find' component={Find}/> 
            <Route path='/view/:id' component={Find}/> 

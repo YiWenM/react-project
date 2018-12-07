@@ -23,19 +23,19 @@ class Home extends Component {
          <div className = 'container_fluid'>
 	         <ul className={css.headNav + ' ' + 'clear'} >
 	         { this.props.dataList.length?
-	         	this.props.dataList.map((item,index)=><li key={item.gc_id} onClick = {(e)=>this.handleClick.call(this,null,item.gc_id,index)} onMouseOver={this.Mouseover.bind(this,index)}
-	         		className={this.state.current===index?css.active:""||this.state.currents===index?css.change:""}>	
+	         	this.props.dataList.map((item,index)=><li key={item.gc_id} onClick = {(e)=>this.handleClick.call(this,null,item.gc_id,index)}
+	         		className={(this.state.current===index?css.active:"") + ' ' + css.changeColorLi}>	
 		         	<img src = {item.pc_icon} alt=""/>
 		         	 <span>{item.gc_name}</span>
-			         	 <ul className={this.state.currents===index?css.show:''} onMouseOut={this.outleave.bind(this)}>
+			         	 <ul className={css.towUl} onMouseOut={this.outleave.bind(this)}>
 			         	 	{
-			         	 	  item.children.map((items,index2)=><li  key={items.gc_id} onMouseOver={this.Mouseover2.bind(this,index2)} className={this.state.current2===index2?css.change:""}
+			         	 	  item.children.map((items,index2)=><li  key={items.gc_id} className={css.changeColor}
                        onClick = {(e)=>this.handleClickList.call(this,e,items.gc_id,index2,index,item.gc_id)}><span>{items.gc_name}</span></li>)
 			         	 	}
 			         	 </ul>
 	         </li>):null
 	         }
-	          <li  onClick = {this.handleClick2.bind(this)}>
+	          <li  onClick = {this.handleClick2.bind(this)} className={css.only + ' '+ css.changeColorLi}>
 	          	<img src = '' alt=""/>
 	         	<span>化妆教学（收费）</span>
 	          </li>
@@ -52,33 +52,51 @@ class Home extends Component {
   }
   componentWillMount(){
   	this.props.getNav();
+    this.setState({
+      current:JSON.parse(localStorage.mainIndex)
+    })
+  }
+  componentDidMount(){
+   if(this.props.history.location.pathname!=='/home'){
+    this.props.getShow(true);
+   }else{
+    this.props.getShow(false)
+   }
   }
   handleClick(e,data,index){
+    localStorage.mainid = data
+    localStorage.mainIndex = index
   	this.setState({
-    	current:index,
+    	current:JSON.parse(localStorage.mainIndex),
       currents:index,
       isShow:true
     })
     this.props.getList4(data)
     this.props.getList3(index,data)
     this.props.getList(index,data)
-    this.props.getShow();
+    this.props.getShow(true);
   	this.props.history.push('/category?id=' + data)
     
   }
   handleClickList(e,data,index,ulIndex,mainid){
       e.stopPropagation();
       e.nativeEvent.stopImmediatePropagation()
+      localStorage.mainid = mainid
+      localStorage.id = data
+      localStorage.mainIndex = ulIndex
+      console.log(1111111111,JSON.parse( localStorage.id))
       this.setState({
         isShow:true,
-        current:ulIndex
+        current:JSON.parse(localStorage.mainIndex)
 
       })
-      this.props.getShow();
+     
+      console.log(JSON.parse( localStorage.mainIndex))
+      this.props.getShow(true);
       this.props.getList4(data);
       this.props.getList2(data)
       this.props.getList(ulIndex,data)
-     this.props.getList3(data,mainid)
+      this.props.getList3(data,mainid)
       this.props.history.push('/category?id=' + data)
       
   }
@@ -86,14 +104,9 @@ class Home extends Component {
   	this.props.history.push('/chargeTutoria')
   }
   Mouseover(data){
+    console.log(data)
     this.setState({
       currents:data
-
-    })
-  }
-  Mouseover2(data){
-    this.setState({
-      current2:data
 
     })
   }
