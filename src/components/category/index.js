@@ -19,10 +19,10 @@ class Category extends Component {
     	    	  <Breadcrumb separator="|">
     	            <Breadcrumb.Item className={css.kinds}>品类</Breadcrumb.Item>
     	            <Breadcrumb.Item onClick={this.handleClick.bind(this,this.props.ids.mainid)} className={(this.props.my.location.search==='?id='+this.props.ids.mainid)?css.active:''}>全部</Breadcrumb.Item>
-    	    	  	{this.props.lists.list.children.map((item,index)=><Breadcrumb.Item onClick={this.handleClick.bind(this,item.gc_id)} key={item.gc_id} 
+    	    	  	  {this.props.lists.list.children.map((item,index)=><Breadcrumb.Item onClick={this.handleClick.bind(this,item.gc_id)} key={item.gc_id} 
     	    	  		className={this.props.my.location.search==='?id='+item.gc_id? css.active:css.kinds}>
     	    	  		{item.gc_name}</Breadcrumb.Item>)}
-    	    	  	</Breadcrumb> 
+    	    	  </Breadcrumb> 
                  </div>
     	    	  	:null
 

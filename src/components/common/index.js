@@ -28,7 +28,7 @@ class Common extends Component {
 				      		<span>首页</span>
 				      		<ul className={css.top_right}>
 								<li>Hi！花卷商城欢迎你~</li>
-								<li>登录</li>
+								<li><a href="/login">登录</a></li>
 								<li>
 									<i className="iconfont icon-mobilephone"></i>
 									<span>花卷app下载</span>
@@ -69,6 +69,7 @@ class Common extends Component {
 		})
 
 	}
+
 }	
 
 	
