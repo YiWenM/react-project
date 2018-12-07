@@ -37,10 +37,10 @@
       }
     })
    } ,
-   getShow(){
+   getShow(data){
     return{
       type:'isShow',
-      payload:true
+      payload:data
     }
    }	
  }

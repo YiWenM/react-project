@@ -25,7 +25,7 @@ class Common extends Component {
 		    		<div className={css.head_topper}>
 				        <div className={css.head_top + ' ' + 'container_fluid'}>
 				      		<i className="iconfont icon-atm"></i>
-				      		<span>首页</span>
+				      		<a href="/home">首页</a>
 				      		<ul className={css.top_right}>
 								<li>Hi！花卷商城欢迎你~</li>
 								<li><a href="/login">登录</a></li>
@@ -49,7 +49,7 @@ class Common extends Component {
 							</div>
 							<p>
 								<i className="iconfont icon-cart"></i>
-								<span>我的购物车</span>
+								<a href="/shoppingCart">我的购物车</a>
 								<span>0</span>
 							</p>
 				        </div>
